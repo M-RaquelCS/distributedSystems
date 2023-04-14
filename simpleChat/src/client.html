@@ -24,7 +24,7 @@
 <body>
     <ul id="messages"></ul>
     <form id="form" action="">
-        <input type="text" id="username">
+        <input type="text" id="username" autocomplete="off">
         <input id="message" autocomplete="off" /><button type="submit">Send</button>
     </form>
 </body>
@@ -60,7 +60,7 @@
     window.scrollTo(0, document.body.scrollHeight);
   }
 
-  socket.on('previousMessage', function (messages) { //renderiza as mensagens já enviadas sem perder ao dar o reset na pagina, apenas quando restarta a aplicação
+  socket.on('previousMessage', function (messages) { //renderiza as mensagens já enviadas sem perder ao dar o reset na página, apenas quando restarta a aplicação
     for (message of messages) {
         renderMessage(message);
     }
